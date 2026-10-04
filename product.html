@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product — Solstice</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/product.css" />
+</head>
+<body data-page="product">
+
+  <div id="header-placeholder"></div>
+
+  <main class="container" id="productMain">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span>
+      <a href="catalog.html" id="breadcrumbCategory">Shop</a><span>/</span>
+      <span id="breadcrumbName">Product</span>
+    </nav>
+
+    <section class="product-detail">
+      <div class="product-detail__media" id="productMedia"></div>
+
+      <div class="product-detail__info">
+        <p class="eyebrow" id="productEyebrow"></p>
+        <h1 id="productName"></h1>
+        <div class="rating-line product-detail__rating" id="productRating"></div>
+        <p class="product-detail__price" id="productPrice"></p>
+        <p class="product-detail__desc" id="productDesc"></p>
+        <p class="product-detail__fabric" id="productFabric"></p>
+
+        <div class="option-group">
+          <div class="option-group__label">
+            <span>Size</span>
+            <a href="#" class="btn-ghost" style="font-size:0.78rem">Size guide</a>
+          </div>
+          <div class="size-grid" id="sizeGrid"></div>
+        </div>
+
+        <div class="qty-row">
+          <div class="qty-control">
+            <button type="button" id="qtyMinus" aria-label="Decrease quantity">−</button>
+            <span id="qtyDisplay">1</span>
+            <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <div class="product-detail__actions">
+          <button class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
+          <button class="wish-btn" id="wishBtn" aria-label="Toggle wishlist" aria-pressed="false">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M12 20.4c-.3 0-.6-.1-.8-.3C7 16.7 3.5 13.6 3.5 9.8 3.5 7.1 5.6 5 8.3 5c1.5 0 2.9.7 3.7 1.9C12.8 5.7 14.2 5 15.7 5c2.7 0 4.8 2.1 4.8 4.8 0 3.8-3.5 6.9-7.7 10.3-.2.2-.5.3-.8.3z"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="product-detail__meta">
+          <span class="pill">Color: <span id="productColor"></span></span>
+          <span class="pill">Free shipping $75+</span>
+          <span class="pill">30-day returns</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviewsSection">
+      <div class="section-head">
+        <h2>Reviews &amp; Ratings</h2>
+      </div>
+
+      <div class="reviews__summary">
+        <span class="reviews__avg" id="reviewsAvg">—</span>
+        <div>
+          <div id="reviewsStars"></div>
+          <p id="reviewsCount" style="font-size:0.85rem;color:var(--color-ink-soft)"></p>
+        </div>
+      </div>
+
+      <div class="reviews__layout">
+        <div class="review-list" id="reviewList"></div>
+
+        <div class="review-form">
+          <h3>Write a review</h3>
+          <form id="reviewForm" novalidate>
+            <div class="field" id="ratingField">
+              <label>Your rating</label>
+              <div class="star-input" id="starInput"></div>
+              <p class="field-error">Please choose a star rating.</p>
+            </div>
+            <div class="field" id="nameField">
+              <label for="reviewName">Name</label>
+              <input type="text" id="reviewName" placeholder="Jamie Rivera" />
+              <p class="field-error">Please enter your name.</p>
+            </div>
+            <div class="field" id="textField">
+              <label for="reviewText">Review</label>
+              <textarea id="reviewText" placeholder="What did you think of the fit and fabric?"></textarea>
+              <p class="field-error">Please write at least a few words.</p>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Post review</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="related" id="relatedSection">
+      <div class="section-head">
+        <h2>You might also like</h2>
+      </div>
+      <div class="product-grid" id="relatedGrid"></div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

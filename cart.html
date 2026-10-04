@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart — Solstice</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+</head>
+<body data-page="cart">
+
+  <div id="header-placeholder"></div>
+
+  <main class="container cart-page">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span>Cart</nav>
+    <h1>Your Cart</h1>
+
+    <div class="cart-layout" id="cartLayout">
+      <div class="cart-list" id="cartList"></div>
+
+      <aside class="summary-card">
+        <h3>Order Summary</h3>
+        <div class="summary-row"><span>Subtotal</span><span id="summarySubtotal">RS:0.00</span></div>
+        <div class="summary-row"><span>Shipping</span><span id="summaryShipping">Free</span></div>
+        <div class="summary-row summary-row--total"><span>Total</span><span id="summaryTotal">$0.00</span></div>
+        <a href="checkout.html" class="btn btn-primary btn-block">Proceed to Checkout</a>
+        <p class="summary-note" id="summaryNote"></p>
+      </aside>
+    </div>
+
+    <div class="empty-state" id="cartEmpty" style="display:none">
+      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <path d="M6 8h12l-1 12.5a1 1 0 0 1-1 .9H8a1 1 0 0 1-1-.9L6 8Z"/>
+        <path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+      </svg>
+      <h2>Your cart is empty</h2>
+      <p>Looks like you haven't added anything yet.</p>
+      <a href="catalog.html" class="btn btn-primary" style="margin-top:1.5rem;">Start shopping</a>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

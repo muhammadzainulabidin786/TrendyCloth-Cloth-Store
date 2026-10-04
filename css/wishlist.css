@@ -1,0 +1,36 @@
+/* ============================================================
+   wishlist.css
+   ============================================================ */
+
+.wishlist-page {
+  padding-block: 1rem 5rem;
+}
+
+.wishlist-page h1 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 0.5rem;
+}
+
+.wishlist-page > .container-sub {
+  margin-bottom: 2rem;
+}
+
+.wishlist-page p.lede {
+  color: var(--color-ink-soft);
+  margin-bottom: 2rem;
+}
+
+/* quick-add button injected onto wishlist product cards */
+.product-card__quickadd {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-top: 1px solid var(--color-line);
+  background: var(--color-card);
+}
+
+.product-card__quickadd:hover {
+  background: var(--color-ink);
+  color: var(--color-card);
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrendyCloth — Considered Clothing</title>
+  <meta name="description" content="Honest, everyday clothing for men and women. Shop new arrivals at Solstice." />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body data-page="home">
+
+  <div id="header-placeholder"></div>
+
+  <main>
+    <section class="container hero">
+      <div>
+        <p class="eyebrow hero__eyebrow">Autumn / Winter Collection</p>
+        <h1>Clothes built to be worn, not just bought.</h1>
+        <p>
+          Honest fabric, considered cuts, and prices that don't assume you're
+          buying a logo. Every piece is made to be worn on repeat for years,
+          not one season.
+        </p>
+        <div class="hero__actions">
+          <a href="catalog.html" class="btn btn-primary">Shop the collection</a>
+          <a href="catalog.html?category=Women" class="btn btn-secondary">Shop Women</a>
+        </div>
+      </div>
+      <div class="hero__visual" id="heroVisual">
+  <img
+    src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
+    alt="New season women's fashion"
+    class="hero__image"
+  />
+
+  <div class="hero__tag">
+    <span class="swatch-hole"></span>
+    <span class="tag-price">New season</span>
+  </div>
+</div>
+    </section>
+
+    <section class="container category-strip">
+
+  <!-- Women -->
+  <a class="category-tile" href="catalog.html?category=Women">
+    <img
+      src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+      alt="Women's clothing"
+    />
+    <div class="category-tile__overlay"></div>
+    <div class="category-tile__content">
+      <span>32 styles</span>
+      <h3>Women</h3>
+    </div>
+  </a>
+
+  <!-- Men -->
+  <a class="category-tile" href="catalog.html?category=Men">
+    <img 
+  src="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=900&q=85" 
+  alt="Man sitting on gray concrete wall"
+>
+    <div class="category-tile__overlay"></div>
+    <div class="category-tile__content">
+      <span>28 styles</span>
+      <h3>Men</h3>
+    </div>
+  </a>
+
+  <!-- Accessories -->
+  <a class="category-tile" href="catalog.html?category=Accessories">
+    <img
+      src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&w=900&q=85"
+      alt="Fashion accessories"
+    />
+    <div class="category-tile__overlay"></div>
+    <div class="category-tile__content">
+      <span>14 styles</span>
+      <h3>Accessories</h3>
+    </div>
+  </a>
+
+</section>
+
+    <section class="container featured">
+      <div class="section-head">
+        <h2>Recently added</h2>
+        <a href="catalog.html" class="btn-ghost">View all products →</a>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </section>
+
+    <section class="value-strip">
+      <div class="value-strip__item">
+        <h4>Free shipping over 15000</h4>
+        <p>Standard delivery in 3–5 business days.</p>
+      </div>
+      <div class="value-strip__item">
+        <h4>30-day returns</h4>
+        <p>Unworn items, tags on, full refund.</p>
+      </div>
+      <div class="value-strip__item">
+        <h4>Made to last</h4>
+        <p>Natural fibers, reinforced seams, repairable.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/home.js"></script>
+  <script>
+    document.getElementById("heroVisual").insertAdjacentHTML(
+      "afterbegin",
+      getGarmentSVG("jacket", "#A8542E", { size: 320 })
+    );
+  </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+/* ============================================================
+   home.css — hero, category tiles, featured rail
+   Also defines .product-card, shared with catalog.css pages.
+   ============================================================ */
+
+/* ---------------- hero ---------------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 3rem;
+  padding-block: 3.5rem 4.5rem;
+}
+
+.hero__eyebrow {
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  max-width: 12ch;
+}
+
+.hero p {
+  margin-top: 1.25rem;
+  max-width: 42ch;
+  color: var(--color-ink-soft);
+  font-size: 1.05rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero__visual {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-clay);
+  display: grid;
+  place-items: center;
+}
+
+.hero__visual svg {
+  width: 78%;
+  height: 78%;
+}
+
+.hero__tag {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  background: var(--color-card);
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-lift);
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-block: 2rem 3rem;
+    text-align: left;
+  }
+}
+
+/* ---------------- category tiles ---------------- */
+
+.category-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  padding-block: 1rem 4rem;
+}
+
+.category-tile {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  color: var(--color-card);
+  isolation: isolate;
+  text-decoration: none;
+}
+
+.category-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+  z-index: -2;
+}
+
+.category-tile__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.05) 65%
+  );
+  z-index: -1;
+}
+
+.category-tile__content {
+  position: relative;
+  padding: 1.25rem;
+  z-index: 1;
+}
+
+.category-tile:hover img {
+  transform: scale(1.06);
+}
+/*
+.category-tile {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+  color: var(--color-card);
+  isolation: isolate;
+}
+
+.category-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--tile-color, var(--color-moss));
+  z-index: -2;
+}
+
+.category-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent 55%);
+  z-index: -1;
+}
+*/
+.category-tile h3 {
+  font-size: 1.5rem;
+}
+
+.category-tile span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+@media (max-width: 760px) {
+  .category-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------- featured section ---------------- */
+
+.featured {
+  padding-block: 1rem 5rem;
+}
+
+/* ---------------- value strip ---------------- */
+
+.value-strip {
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.value-strip__item {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-left: 1px solid var(--color-line);
+}
+
+.value-strip__item:first-child {
+  border-left: none;
+}
+
+.value-strip__item h4 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.value-strip__item p {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+@media (max-width: 700px) {
+  .value-strip {
+    grid-template-columns: 1fr;
+  }
+  .value-strip__item {
+    border-left: none;
+    border-top: 1px solid var(--color-line);
+  }
+  .value-strip__item:first-child {
+    border-top: none;
+  }
+}

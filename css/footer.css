@@ -1,0 +1,130 @@
+/* ============================================================
+   footer.css
+   ============================================================ */
+
+.site-footer {
+  background: var(--color-ink);
+  color: var(--color-bg);
+  margin-top: 4rem;
+}
+
+.site-footer__newsletter {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: 3rem 1.5rem;
+  border-bottom: 1px solid rgba(239, 235, 227, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.site-footer__newsletter h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.site-footer__newsletter p {
+  color: #b8b3a6;
+  font-size: 0.9rem;
+}
+
+.site-footer__form {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.site-footer__form input {
+  background: transparent;
+  border: 1px solid rgba(239, 235, 227, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  color: var(--color-bg);
+  min-width: 240px;
+}
+
+.site-footer__form input::placeholder {
+  color: #8b8679;
+}
+
+.site-footer__form button {
+  background: var(--color-clay);
+  color: var(--color-card);
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.site-footer__form button:hover {
+  background: #bd6539;
+}
+
+.site-footer__grid {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.site-footer__logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.site-footer__col p {
+  color: #b8b3a6;
+  font-size: 0.88rem;
+  max-width: 32ch;
+}
+
+.site-footer__col h3 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b8b3a6;
+  margin-bottom: 0.9rem;
+}
+
+.site-footer__col a {
+  display: block;
+  padding-block: 0.32rem;
+  font-size: 0.9rem;
+  color: #ddd9cd;
+}
+
+.site-footer__col a:hover {
+  color: var(--color-clay);
+}
+
+.site-footer__bottom {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: 1.25rem 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  color: #8b8679;
+}
+
+@media (max-width: 760px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .site-footer__form {
+    width: 100%;
+  }
+  .site-footer__form input {
+    flex: 1;
+    min-width: 0;
+  }
+}

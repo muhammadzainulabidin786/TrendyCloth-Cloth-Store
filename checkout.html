@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Solstice</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/product.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body data-page="checkout">
+
+  <div id="header-placeholder"></div>
+
+  <main class="container checkout-page">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="cart.html">Cart</a><span>/</span>Checkout</nav>
+    <h1 id="checkoutHeading">Checkout</h1>
+
+    <div class="checkout-layout" id="checkoutLayout">
+      <form id="checkoutForm" novalidate>
+        <section class="checkout-section">
+          <h2>Contact &amp; Shipping</h2>
+          <div class="field-grid">
+            <div class="field field--full" id="fullNameField">
+              <label for="fullName">Full name</label>
+              <input type="text" id="fullName" placeholder="Jamie Rivera" />
+              <p class="field-error">Please enter your full name.</p>
+            </div>
+            <div class="field field--full" id="emailField">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="you@example.com" />
+              <p class="field-error">Please enter a valid email.</p>
+            </div>
+            <div class="field field--full" id="addressField">
+              <label for="address">Address</label>
+              <input type="text" id="address" placeholder="123 Market Street" />
+              <p class="field-error">Please enter your address.</p>
+            </div>
+            <div class="field" id="cityField">
+              <label for="city">City</label>
+              <input type="text" id="city" placeholder="Karachi" />
+              <p class="field-error">Please enter your city.</p>
+            </div>
+            <div class="field" id="zipField">
+              <label for="zip">ZIP / Postal code</label>
+              <input type="text" id="zip" placeholder="74200" />
+              <p class="field-error">Please enter a postal code.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="checkout-section">
+          <h2>Payment</h2>
+          <div class="field-grid">
+            <div class="field field--full" id="cardNumberField">
+              <label for="cardNumber">Card number</label>
+              <input type="text" id="cardNumber" placeholder="4242 4242 4242 4242" inputmode="numeric" />
+              <p class="field-error">Please enter a valid card number.</p>
+            </div>
+            <div class="field" id="cardExpiryField">
+              <label for="cardExpiry">Expiry</label>
+              <input type="text" id="cardExpiry" placeholder="MM/YY" />
+              <p class="field-error">Please enter the expiry date.</p>
+            </div>
+            <div class="field" id="cardCvcField">
+              <label for="cardCvc">CVC</label>
+              <input type="text" id="cardCvc" placeholder="123" inputmode="numeric" />
+              <p class="field-error">Please enter the CVC.</p>
+            </div>
+          </div>
+          <p style="font-size:0.78rem;color:var(--color-stone);margin-top:0.75rem;">
+            This is a student project — no real payment is processed.
+          </p>
+        </section>
+
+        <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+      </form>
+
+      <aside class="order-review">
+        <h3>Order Review</h3>
+        <div id="orderItems"></div>
+        <div class="summary-row"><span>Subtotal</span><span id="checkoutSubtotal">$0.00</span></div>
+        <div class="summary-row"><span>Shipping</span><span id="checkoutShipping">Free</span></div>
+        <div class="summary-row summary-row--total"><span>Total</span><span id="checkoutTotal">$0.00</span></div>
+      </aside>
+    </div>
+
+    <div class="confirmation" id="confirmation" style="display:none">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M8 12.5l2.5 2.5L16 9.5"/>
+      </svg>
+      <h1>Order placed</h1>
+      <p>Thanks for shopping with Solstice. A confirmation has been sent to your email, and your order is being prepared for shipment.</p>
+      <p class="order-number">Order #<span id="orderNumber"></span></p>
+      <a href="catalog.html" class="btn btn-primary" style="margin-top:2rem;">Continue shopping</a>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
